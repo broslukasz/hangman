@@ -19,11 +19,14 @@
 <body ng-controller="mainController" ng-keyup="keyPress($event.keyCode)">
 
 <p>{{buttonClicked}}</p>
-<span ng-repeat="list in buttonArray">{{list}}</span>
+<span ng-repeat="list in buttonArray track by $index">{{list}}</span>
 
-<p>{{typ}}</p>
+<p>{{logArray}}</p>
 
+<p>----------</p>
 
+<p>The Value is {{randomValue}}</p>
+<span ng-repeat='listEmpty in primaryArray track by $index'>{{listEmpty}}</span>
 
 
 
