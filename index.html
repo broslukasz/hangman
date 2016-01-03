@@ -18,15 +18,32 @@
 </head>
 <body ng-controller="mainController" ng-keyup="keyPress($event.keyCode)">
 
-<p>{{buttonClicked}}</p>
-<span ng-repeat="list in buttonArray track by $index">{{list}}</span>
+<p><span>Current Button: </span>{{buttonClicked}}</p>
 
-<p>{{logArray}}</p>
+<span>Buttons pressed: </span>
+<span ng-repeat="list in buttonsArray track by $index">{{list}}</span>
+
+<p>
+	<span>Missed buttons: </span>
+	<span ng-repeat="missed in missedArray track by $index">{{missed}}</span>
+</p>
+
+<p>
+	<span>Matched Buttons:</span>
+	<span>{{lettersMatched}}</span>
+</p>
+
+<p>{{buttonsArray}}</p>
 
 <p>----------</p>
 
 <p>The Value is {{randomValue}}</p>
 <span ng-repeat='listEmpty in primaryArray track by $index'>{{listEmpty}}</span>
+
+<p>
+	<span>Letters matched:</span>
+	<span>{{lettersMatched}}</span>
+</p>
 
 
 
