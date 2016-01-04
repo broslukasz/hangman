@@ -13,14 +13,27 @@ myApp.controller('mainController', ['$scope', function($scope) {
 	$scope.missedArray = [];
 
 	var primaryArray = [];
+	var secondaryArray = [];
 	$scope.mistakesNumber = 0;
+	$scope.hangEvent = {
+		array: [],
+		imgAdd: function(){
+			this.array.push({url: 'assets/img/order/0' + this.array.length + '.png', imgClass: 'imgBox__hangImages--img0' + this.array.length});
+		}
+		};
 
 	var emptyLettersArray = function(){
 		for (z = 0, x = randomizedValue.length; z<x; z++){
 			primaryArray.push("_ ");
 		};
-		return thePrimaryArray = primaryArray;
 	}();
+
+	$scope.makeEmpty = function(){
+		primaryArray.splice(0,primaryArray.length);
+		for (z = 0, x = randomizedValue.length; z<x; z++){
+			primaryArray.push("_ ");
+		};
+	};
 
 	$scope.primaryArray = primaryArray;
 	$scope.lettersMatched = [];
@@ -36,6 +49,7 @@ myApp.controller('mainController', ['$scope', function($scope) {
 				if ($scope.buttonsArray.indexOf(res + ", ") >= 0) {
 					console.log('The existing letter has been repeated');
 					$scope.mistakesNumber++;
+					$scope.hangEvent.imgAdd();
 				} else {
 					$scope.lettersMatched.push(res);
 					console.log("Letter " + res + " finds in the word for the first time");
@@ -46,12 +60,23 @@ myApp.controller('mainController', ['$scope', function($scope) {
 				count++;
 			}
 		};
+		var zakoncz = function(){
+			if ($scope.lettersMatched.length == $scope.primaryArray.length && $scope.mistakesNumber < 11) {
+				alert('You have won the game');
+				location.reload();
+
+			} else if ($scope.mistakesNumber >= 11) {
+				alert('You have lost the game');
+				location.reload();
+			}
+		}();
 
 		var repetition = function (){
 			var countRepeat = $scope.buttonsArray.indexOf(res + ", ");
 			if (count == randomizedValue.length && (code > 64 && code < 91)) {
 			console.log('The letter does not exists');
 			$scope.mistakesNumber++;
+			$scope.hangEvent.imgAdd();
 				if (countRepeat >= 0) {
 					console.log('It is still a wrong letter');
 				} else {
@@ -62,20 +87,5 @@ myApp.controller('mainController', ['$scope', function($scope) {
 		}();
 		
 		code > 64 && code < 91 ? ($scope.buttonClicked = res, $scope.buttonsArray.push($scope.buttonClicked + ", ")) : console.log(res + " to nie litera");
-
-		var ukonczono = function(){
-			if ($scope.lettersMatched.length == $scope.primaryArray.length && $scope.mistakesNumber < 8) {
-				console.log('You have won the game');
-			} else if ($scope.mistakesNumber >= 8) {
-				console.log('You have lost the game');
-			}
-	}();
-
-
-
 	};
-
-
-
-	
 }]);

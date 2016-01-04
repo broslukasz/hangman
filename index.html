@@ -33,21 +33,31 @@
 	<span>{{lettersMatched}}</span>
 </p>
 
-<p>{{buttonsArray}}</p>
-
 <p>----------</p>
 
 <p>The Value is {{randomValue}}</p>
 <span ng-repeat='listEmpty in primaryArray track by $index'>{{listEmpty}}</span>
 
-<p>
-	<span>Letters matched:</span>
-	<span>{{lettersMatched}}</span>
-</p>
+
 
 <p>
 	<span>Mistakes Number: </span>
 	<span>{{mistakesNumber}}</span>
+</p>
+
+<p>
+	<span>Hang array: </span>
+	<span>{{hangEvent.array}}</span>
+</p>
+
+<p>
+	<span>Hang images:</span>
+	<div class="imgBox">
+		<div class="imgBox__hangImages {{imgs.imgClass}}" ng-repeat='imgs in hangEvent.array'>
+		<img ng-src="{{imgs.url}}">
+		</div>
+	</div>
+	
 </p>
 
 
