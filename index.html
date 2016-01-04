@@ -18,47 +18,35 @@
 </head>
 <body ng-controller="mainController" ng-keyup="keyPress($event.keyCode)">
 
-<p><span>Current Button: </span>{{buttonClicked}}</p>
 
-<span>Buttons pressed: </span>
-<span ng-repeat="list in buttonsArray track by $index">{{list}}</span>
-
-<p>
-	<span>Missed buttons: </span>
-	<span ng-repeat="missed in missedArray track by $index">{{missed}}</span>
-</p>
-
-<p>
-	<span>Matched Buttons:</span>
-	<span>{{lettersMatched}}</span>
-</p>
-
-<p>----------</p>
-
-<p>The Value is {{randomValue}}</p>
-<span ng-repeat='listEmpty in primaryArray track by $index'>{{listEmpty}}</span>
-
-
-
-<p>
-	<span>Mistakes Number: </span>
-	<span>{{mistakesNumber}}</span>
-</p>
-
-<p>
-	<span>Hang array: </span>
-	<span>{{hangEvent.array}}</span>
-</p>
-
-<p>
-	<span>Hang images:</span>
-	<div class="imgBox">
-		<div class="imgBox__hangImages {{imgs.imgClass}}" ng-repeat='imgs in hangEvent.array'>
-		<img ng-src="{{imgs.url}}">
+<div class="mainContainer">
+	<div class="mainContainer__boxLeft">
+		<div>
+			<img class="mainContainer__boxLeft--bar" src="assets/img/bar.png">
+		</div>
+		<div class="imgBox">
+			<div class="imgBox__hangImages {{imgs.imgClass}}" ng-repeat='imgs in hangEvent.array'>
+			<img ng-src="{{imgs.url}}" class="abs">
+			</div>
 		</div>
 	</div>
+	<div class="mainContainer__boxRight mainContainer__boxRight--missed">YOU MISSED: </div>
+
+	<div class="mainContainer__boxRight mainContainer__boxRight--missedLetters">
+		<span class="mainContainer__boxRight--missedLetters--spacing" ng-repeat="missed in missedArray track by $index">{{missed}}</span>
+	</div>
 	
-</p>
+	<div class="clear"></div>
+	<div class="solution">
+
+		<span class="solution__wordBoxes solution__wordBoxes--empty" ng-repeat='listEmpty in emptyCells track by $index'>{{listEmpty}}</span>
+
+		<span class="solution__wordBoxes solution__wordBoxes--full" ng-repeat='listToFill in primaryArray track by $index'>{{listToFill}}</span>
+	</div>
+		
+</div>
+	
+
 
 
 

@@ -1,6 +1,6 @@
 myApp.controller('mainController', ['$scope', function($scope) {
 
-	var wordsArray = ['piesa', 'kota', 'mysliwya'];
+	var wordsArray = ['jastrzab', 'kredka', 'lodowka', 'pies', 'lody'];
 	var wordsLottery = function(){
 		var rand = wordsArray[Math.floor(Math.random() * wordsArray.length)];
 		return randomizedValue = rand.toUpperCase();	
@@ -24,14 +24,14 @@ myApp.controller('mainController', ['$scope', function($scope) {
 
 	var emptyLettersArray = function(){
 		for (z = 0, x = randomizedValue.length; z<x; z++){
-			primaryArray.push("_ ");
+			primaryArray.push("_");
 		};
 	}();
 
 	$scope.makeEmpty = function(){
 		primaryArray.splice(0,primaryArray.length);
 		for (z = 0, x = randomizedValue.length; z<x; z++){
-			primaryArray.push("_ ");
+			primaryArray.push("_");
 		};
 	};
 
@@ -60,16 +60,6 @@ myApp.controller('mainController', ['$scope', function($scope) {
 				count++;
 			}
 		};
-		var zakoncz = function(){
-			if ($scope.lettersMatched.length == $scope.primaryArray.length && $scope.mistakesNumber < 11) {
-				alert('You have won the game');
-				location.reload();
-
-			} else if ($scope.mistakesNumber >= 11) {
-				alert('You have lost the game');
-				location.reload();
-			}
-		}();
 
 		var repetition = function (){
 			var countRepeat = $scope.buttonsArray.indexOf(res + ", ");
@@ -80,12 +70,35 @@ myApp.controller('mainController', ['$scope', function($scope) {
 				if (countRepeat >= 0) {
 					console.log('It is still a wrong letter');
 				} else {
-					$scope.missedArray.push(res + ", ");
+					$scope.missedArray.push(res + " ");
 					countRepeat++;
 				}
 			}
 		}();
 		
 		code > 64 && code < 91 ? ($scope.buttonClicked = res, $scope.buttonsArray.push($scope.buttonClicked + ", ")) : console.log(res + " to nie litera");
+
+		var ukonczono = function(){
+			if ($scope.lettersMatched.length == $scope.primaryArray.length && $scope.mistakesNumber < 11) {
+				setTimeout(function(){ alert("You have won the game"); }, 100);
+				setTimeout(function(){location.reload(); }, 1000);
+
+			} else if ($scope.mistakesNumber >= 11) {
+				setTimeout(function(){ alert("You have lost the game"); }, 100);
+				setTimeout(function(){location.reload(); }, 1000);
+				
+			}
+		}();
 	};
+
+	$scope.emptyCells = [];
+
+	var emptyCells = function(){
+			var countCells = (11 - randomizedValue.length);
+			for(var i = 0, x = countCells; i<x; i++){
+				console.log('puste są: ' + i);
+				$scope.emptyCells.push('_');
+			}
+		}();
+	
 }]);

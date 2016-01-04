@@ -1,91 +1,197 @@
-/* line 8, ../scss/index.scss */
-.imgBox {
-  width: 287px;
-  height: 571px;
-  max-width: 287px;
-  max-height: 571px;
-  position: absolute;
+@font-face {
+  font-family: AllerDisplay, sans-serif;
+  src: url(assets/fonts/AllerDisplay.ttf), format("truetype");
 }
 
-/* line 16, ../scss/index.scss */
+/* line 9, ../scss/components/_base.scss */
+html, body, h1, h2, h3, p, ol, ul, li, a, div {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/* line 15, ../scss/components/_base.scss */
+body {
+  font-family: AllerDisplay, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background: #3b4263;
+  padding: 85px;
+}
+
+/* line 2, ../scss/components/_layout.scss */
+.clear {
+  clear: both;
+}
+
+/* line 6, ../scss/components/_layout.scss */
+.mainContainer {
+  padding: 34px;
+  box-sizing: border-box;
+  margin: auto;
+  width: 810px;
+  height: 490px;
+  background: white;
+  overflow: hidden;
+}
+
+/* line 16, ../scss/components/_layout.scss */
+.mainContainer__boxLeft {
+  width: 150px;
+  float: left;
+  position: relative;
+}
+
+/* line 22, ../scss/components/_layout.scss */
+.mainContainer__boxLeft--bar {
+  position: relative;
+  right: 142px;
+}
+
+/* line 27, ../scss/components/_layout.scss */
+.mainContainer__boxRight {
+  margin-left: 350px;
+}
+
+/* line 31, ../scss/components/_layout.scss */
+.mainContainer__boxRight--missed {
+  font-size: 16px;
+  font-weight: 600;
+  color: #53555d;
+  margin-bottom: 12px;
+}
+
+/* line 38, ../scss/components/_layout.scss */
+.mainContainer__boxRight--missedLetters {
+  font-size: 35px;
+  font-weight: 600;
+  color: #4d69fa;
+}
+
+/* line 44, ../scss/components/_layout.scss */
+.mainContainer__boxRight--missedLetters--spacing {
+  padding-left: 2px;
+}
+/* line 46, ../scss/components/_layout.scss */
+.mainContainer__boxRight--missedLetters--spacing:first-child {
+  padding-left: 0;
+}
+
+/* line 51, ../scss/components/_layout.scss */
+.imgBox {
+  width: 143px;
+  height: 300px;
+  max-width: 143px;
+  position: relative;
+  right: 20px;
+  bottom: 8px;
+}
+
+/* line 60, ../scss/components/_layout.scss */
 .imgBox__hangImages {
   color: red;
   position: absolute;
 }
 
-/* line 25, ../scss/index.scss */
+/* line 65, ../scss/components/_layout.scss */
 .imgBox__hangImages--img00 {
-  left: 42px;
+  left: 32px;
   top: 1px;
   z-index: 2;
 }
 
-/* line 31, ../scss/index.scss */
+/* line 71, ../scss/components/_layout.scss */
 .imgBox__hangImages--img01 {
-  left: 115px;
-  top: 193px;
+  left: 69px;
+  top: 98px;
   z-index: 1;
 }
 
-/* line 37, ../scss/index.scss */
+/* line 77, ../scss/components/_layout.scss */
 .imgBox__hangImages--img02 {
-  left: 88px;
-  top: 223px;
+  left: 55px;
+  top: 115px;
   z-index: 1;
 }
 
-/* line 43, ../scss/index.scss */
+/* line 83, ../scss/components/_layout.scss */
 .imgBox__hangImages--img03 {
-  left: 152px;
-  top: 223px;
+  left: 88px;
+  top: 115px;
   z-index: 1;
 }
 
-/* line 49, ../scss/index.scss */
+/* line 89, ../scss/components/_layout.scss */
 .imgBox__hangImages--img04 {
-  left: 3px;
-  top: 223px;
+  left: 13px;
+  top: 115px;
   z-index: 1;
 }
 
-/* line 55, ../scss/index.scss */
+/* line 95, ../scss/components/_layout.scss */
 .imgBox__hangImages--img05 {
-  left: 254px;
-  top: 320px;
+  left: 139px;
+  top: 163px;
   z-index: 0;
 }
 
-/* line 61, ../scss/index.scss */
+/* line 101, ../scss/components/_layout.scss */
 .imgBox__hangImages--img06 {
-  left: 0px;
-  top: 320px;
+  left: 11px;
+  top: 162px;
   z-index: 0;
 }
 
-/* line 67, ../scss/index.scss */
+/* line 107, ../scss/components/_layout.scss */
 .imgBox__hangImages--img07 {
-  left: 144px;
-  top: 371px;
-  z-index: 0;
+  left: 84px;
+  top: 191px;
+  z-index: 1;
 }
 
-/* line 73, ../scss/index.scss */
+/* line 113, ../scss/components/_layout.scss */
 .imgBox__hangImages--img08 {
-  left: 54px;
-  top: 371px;
+  left: 38px;
+  top: 191px;
+  z-index: 1;
+}
+
+/* line 119, ../scss/components/_layout.scss */
+.imgBox__hangImages--img09 {
+  left: 100px;
+  top: 273px;
   z-index: 0;
 }
 
-/* line 79, ../scss/index.scss */
-.imgBox__hangImages--img09 {
-  left: 177px;
-  top: 532px;
-  z-index: -1;
+/* line 125, ../scss/components/_layout.scss */
+.imgBox__hangImages--img010 {
+  left: 21px;
+  top: 273px;
+  z-index: 0;
 }
 
-/* line 85, ../scss/index.scss */
-.imgBox__hangImages--img010 {
-  left: 20px;
-  top: 532px;
-  z-index: -1;
+/* line 131, ../scss/components/_layout.scss */
+.solution {
+  margin-top: 40px;
+}
+
+/* line 135, ../scss/components/_layout.scss */
+.solution__wordBoxes {
+  width: 125px;
+  height: 140px;
+  margin: 5px;
+  font-size: 28px;
+  padding: 19px;
+}
+
+/* line 144, ../scss/components/_layout.scss */
+.solution__wordBoxes--empty {
+  background: #e6e6e7;
+  color: #e6e6e7;
+}
+
+/* line 149, ../scss/components/_layout.scss */
+.solution__wordBoxes--full {
+  background: #50525a;
+  color: white;
 }
