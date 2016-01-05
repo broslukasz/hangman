@@ -18,11 +18,10 @@
 </head>
 <body ng-controller="mainController" ng-keyup="keyPress($event.keyCode)">
 
-
 <div class="mainContainer">
-	<div class="{{gameOverClasses}}">
+	<div class="{{gameOverClasses.windowApear}}">
 		<div class="gameOver__text gameOver__text--01">Game Over</div>
-		<div class="gameOver__text gameOver__text--02" ng-click="pageReload()">New world</div>
+		<div class="{{gameOverClasses.text02}}" ng-click="pageReload()">New world</div>
 	</div>
 	<div class="triangularBackground">jakiś</div>
 	<div class="mainContainer__boxLeft">
@@ -49,9 +48,10 @@
 		<span class="solution__wordBoxes solution__wordBoxes--empty" ng-repeat='listEmpty in emptyCells track by $index' ng-bind='listEmpty'></span>
 
 		<span class="solution__wordBoxes solution__wordBoxes--full" ng-repeat='listToFill in primaryArray track by $index' ng-bind='listToFill'></span>
-	</div>
-		
+	</div>		
 </div>
+
+<div class="winingsCounter">You have won <span class="winingsCounter__number">{{winsCounter}}</span> times!!!</div>
 	
 
 

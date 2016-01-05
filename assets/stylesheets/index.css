@@ -255,5 +255,24 @@ body {
 /* line 204, ../scss/components/_layout.scss */
 .gameOver__text--02:hover {
   cursor: pointer;
-  background: rgba(255, 185, 110, 0.13);
+  background: rgba(255, 185, 110, 0);
+}
+
+/* line 210, ../scss/components/_layout.scss */
+.is-gameOver__text--02--hidden {
+  border-color: white;
+  color: white;
+}
+
+/* line 215, ../scss/components/_layout.scss */
+.winingsCounter {
+  text-align: center;
+  margin: 20px;
+  font-size: 25px;
+}
+
+/* line 221, ../scss/components/_layout.scss */
+.winingsCounter__number {
+  color: #ffb900;
+  font-weight: 600;
 }

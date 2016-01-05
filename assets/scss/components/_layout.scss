@@ -206,3 +206,19 @@
 		background: rgba(255, 185, 110, 0.13);
 	};
 }
+
+.is-gameOver__text--02--hidden{
+	border-color: white;
+	color: white;
+}
+
+.winingsCounter{
+	text-align: center;
+    margin: 20px;
+    font-size: 25px;
+}
+
+.winingsCounter__number{
+	color: #ffb900;
+	font-weight: 600;
+}
