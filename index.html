@@ -20,6 +20,11 @@
 
 
 <div class="mainContainer">
+	<div class="{{gameOverClasses}}">
+		<div class="gameOver__text gameOver__text--01">Game Over</div>
+		<div class="gameOver__text gameOver__text--02" ng-click="pageReload()">New world</div>
+	</div>
+	<div class="triangularBackground">jakiś</div>
 	<div class="mainContainer__boxLeft">
 		<div>
 			<img class="mainContainer__boxLeft--bar" src="assets/img/bar.png">
@@ -33,15 +38,17 @@
 	<div class="mainContainer__boxRight mainContainer__boxRight--missed">YOU MISSED: </div>
 
 	<div class="mainContainer__boxRight mainContainer__boxRight--missedLetters">
-		<span class="mainContainer__boxRight--missedLetters--spacing" ng-repeat="missed in missedArray track by $index">{{missed}}</span>
+		<span class="mainContainer__boxRight--missedLetters--spacing" ng-repeat="missed in missedArray track by $index" ng-bind='missed'></span>
 	</div>
+
 	
+
 	<div class="clear"></div>
 	<div class="solution">
 
-		<span class="solution__wordBoxes solution__wordBoxes--empty" ng-repeat='listEmpty in emptyCells track by $index'>{{listEmpty}}</span>
+		<span class="solution__wordBoxes solution__wordBoxes--empty" ng-repeat='listEmpty in emptyCells track by $index' ng-bind='listEmpty'></span>
 
-		<span class="solution__wordBoxes solution__wordBoxes--full" ng-repeat='listToFill in primaryArray track by $index'>{{listToFill}}</span>
+		<span class="solution__wordBoxes solution__wordBoxes--full" ng-repeat='listToFill in primaryArray track by $index' ng-bind='listToFill'></span>
 	</div>
 		
 </div>
@@ -57,6 +64,7 @@
 
     <!-- Controllers -->
     <script src="app/controllers/mainctrl.js"></script>
+
 
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 

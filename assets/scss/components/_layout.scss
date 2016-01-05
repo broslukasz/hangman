@@ -11,6 +11,7 @@
 	height: 490px;
 	background: white;
 	overflow: hidden;
+	position: relative;
 }
 
 .mainContainer__boxLeft{
@@ -130,6 +131,7 @@
 
 .solution{
 	margin-top: 40px;
+	position: relative;
 }
 
 .solution__wordBoxes{
@@ -137,7 +139,7 @@
 	height: 140px;
 	margin: 5px;
 	font-size: 28px;
-	padding: 19px;
+	padding: 18px;
 
 }
 
@@ -149,4 +151,58 @@
 .solution__wordBoxes--full{
 	background: $fontColorPurple;
 	color: white;
+}
+
+.triangularBackground{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-bottom: 250px solid #4d71fa;
+	border-left: 250px solid transparent;
+}
+
+
+.gameOver{
+	position: absolute;
+	background: #3b4263;
+	width: 810px;
+	height: 100%;
+	overflow: visible;
+	left: 0px;
+	top: 0;
+	z-index: 3;
+	opacity: 0.7;
+	text-align: center;
+}
+
+.gameOver--hidden{
+	visibility: hidden;
+}
+
+.gameOver__text{
+    position: absolute;
+    top: 35%;
+    left: 37%;
+    padding: 10px 20px;
+}
+
+.gameOver__text--01{
+	color: white;
+	font-size: 35px;
+}
+
+.gameOver__text--02{
+	top: 46%;
+    left: 43%;
+	font-size: 18px;
+	border: 2px dashed #ffb900;
+	border-radius: 20px;
+	margin-top: 15px;
+	color: #ffb900;
+	&:hover{
+		cursor: pointer;
+		background: rgba(255, 185, 110, 0.13);
+	};
 }

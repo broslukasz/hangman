@@ -33,27 +33,28 @@ body {
   height: 490px;
   background: white;
   overflow: hidden;
+  position: relative;
 }
 
-/* line 16, ../scss/components/_layout.scss */
+/* line 17, ../scss/components/_layout.scss */
 .mainContainer__boxLeft {
   width: 150px;
   float: left;
   position: relative;
 }
 
-/* line 22, ../scss/components/_layout.scss */
+/* line 23, ../scss/components/_layout.scss */
 .mainContainer__boxLeft--bar {
   position: relative;
   right: 142px;
 }
 
-/* line 27, ../scss/components/_layout.scss */
+/* line 28, ../scss/components/_layout.scss */
 .mainContainer__boxRight {
   margin-left: 350px;
 }
 
-/* line 31, ../scss/components/_layout.scss */
+/* line 32, ../scss/components/_layout.scss */
 .mainContainer__boxRight--missed {
   font-size: 16px;
   font-weight: 600;
@@ -61,23 +62,23 @@ body {
   margin-bottom: 12px;
 }
 
-/* line 38, ../scss/components/_layout.scss */
+/* line 39, ../scss/components/_layout.scss */
 .mainContainer__boxRight--missedLetters {
   font-size: 35px;
   font-weight: 600;
   color: #4d69fa;
 }
 
-/* line 44, ../scss/components/_layout.scss */
+/* line 45, ../scss/components/_layout.scss */
 .mainContainer__boxRight--missedLetters--spacing {
   padding-left: 2px;
 }
-/* line 46, ../scss/components/_layout.scss */
+/* line 47, ../scss/components/_layout.scss */
 .mainContainer__boxRight--missedLetters--spacing:first-child {
   padding-left: 0;
 }
 
-/* line 51, ../scss/components/_layout.scss */
+/* line 52, ../scss/components/_layout.scss */
 .imgBox {
   width: 143px;
   height: 300px;
@@ -87,111 +88,172 @@ body {
   bottom: 8px;
 }
 
-/* line 60, ../scss/components/_layout.scss */
+/* line 61, ../scss/components/_layout.scss */
 .imgBox__hangImages {
   color: red;
   position: absolute;
 }
 
-/* line 65, ../scss/components/_layout.scss */
+/* line 66, ../scss/components/_layout.scss */
 .imgBox__hangImages--img00 {
   left: 32px;
   top: 1px;
   z-index: 2;
 }
 
-/* line 71, ../scss/components/_layout.scss */
+/* line 72, ../scss/components/_layout.scss */
 .imgBox__hangImages--img01 {
   left: 69px;
   top: 98px;
   z-index: 1;
 }
 
-/* line 77, ../scss/components/_layout.scss */
+/* line 78, ../scss/components/_layout.scss */
 .imgBox__hangImages--img02 {
   left: 55px;
   top: 115px;
   z-index: 1;
 }
 
-/* line 83, ../scss/components/_layout.scss */
+/* line 84, ../scss/components/_layout.scss */
 .imgBox__hangImages--img03 {
   left: 88px;
   top: 115px;
   z-index: 1;
 }
 
-/* line 89, ../scss/components/_layout.scss */
+/* line 90, ../scss/components/_layout.scss */
 .imgBox__hangImages--img04 {
   left: 13px;
   top: 115px;
   z-index: 1;
 }
 
-/* line 95, ../scss/components/_layout.scss */
+/* line 96, ../scss/components/_layout.scss */
 .imgBox__hangImages--img05 {
   left: 139px;
   top: 163px;
   z-index: 0;
 }
 
-/* line 101, ../scss/components/_layout.scss */
+/* line 102, ../scss/components/_layout.scss */
 .imgBox__hangImages--img06 {
   left: 11px;
   top: 162px;
   z-index: 0;
 }
 
-/* line 107, ../scss/components/_layout.scss */
+/* line 108, ../scss/components/_layout.scss */
 .imgBox__hangImages--img07 {
   left: 84px;
   top: 191px;
   z-index: 1;
 }
 
-/* line 113, ../scss/components/_layout.scss */
+/* line 114, ../scss/components/_layout.scss */
 .imgBox__hangImages--img08 {
   left: 38px;
   top: 191px;
   z-index: 1;
 }
 
-/* line 119, ../scss/components/_layout.scss */
+/* line 120, ../scss/components/_layout.scss */
 .imgBox__hangImages--img09 {
   left: 100px;
   top: 273px;
   z-index: 0;
 }
 
-/* line 125, ../scss/components/_layout.scss */
+/* line 126, ../scss/components/_layout.scss */
 .imgBox__hangImages--img010 {
   left: 21px;
   top: 273px;
   z-index: 0;
 }
 
-/* line 131, ../scss/components/_layout.scss */
+/* line 132, ../scss/components/_layout.scss */
 .solution {
   margin-top: 40px;
+  position: relative;
 }
 
-/* line 135, ../scss/components/_layout.scss */
+/* line 137, ../scss/components/_layout.scss */
 .solution__wordBoxes {
   width: 125px;
   height: 140px;
   margin: 5px;
   font-size: 28px;
-  padding: 19px;
+  padding: 18px;
 }
 
-/* line 144, ../scss/components/_layout.scss */
+/* line 146, ../scss/components/_layout.scss */
 .solution__wordBoxes--empty {
   background: #e6e6e7;
   color: #e6e6e7;
 }
 
-/* line 149, ../scss/components/_layout.scss */
+/* line 151, ../scss/components/_layout.scss */
 .solution__wordBoxes--full {
   background: #50525a;
   color: white;
+}
+
+/* line 156, ../scss/components/_layout.scss */
+.triangularBackground {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 250px solid #4d71fa;
+  border-left: 250px solid transparent;
+}
+
+/* line 167, ../scss/components/_layout.scss */
+.gameOver {
+  position: absolute;
+  background: #3b4263;
+  width: 810px;
+  height: 100%;
+  overflow: visible;
+  left: 0px;
+  top: 0;
+  z-index: 3;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* line 180, ../scss/components/_layout.scss */
+.gameOver--hidden {
+  visibility: hidden;
+}
+
+/* line 184, ../scss/components/_layout.scss */
+.gameOver__text {
+  position: absolute;
+  top: 35%;
+  left: 37%;
+  padding: 10px 20px;
+}
+
+/* line 191, ../scss/components/_layout.scss */
+.gameOver__text--01 {
+  color: white;
+  font-size: 35px;
+}
+
+/* line 196, ../scss/components/_layout.scss */
+.gameOver__text--02 {
+  top: 46%;
+  left: 43%;
+  font-size: 18px;
+  border: 2px dashed #ffb900;
+  border-radius: 20px;
+  margin-top: 15px;
+  color: #ffb900;
+}
+/* line 204, ../scss/components/_layout.scss */
+.gameOver__text--02:hover {
+  cursor: pointer;
+  background: rgba(255, 185, 110, 0.13);
 }

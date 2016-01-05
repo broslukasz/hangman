@@ -84,14 +84,22 @@ myApp.controller('mainController', ['$scope', function($scope) {
 				setTimeout(function(){location.reload(); }, 1000);
 
 			} else if ($scope.mistakesNumber >= 11) {
-				setTimeout(function(){ alert("You have lost the game"); }, 100);
-				setTimeout(function(){location.reload(); }, 1000);
+				for (var i = 0, x=randomizedValue.length; i < x; i++) {
+					console.log('Słowo ma liter: ' + i);
+
+					primaryArray[i] =  randomizedValue.charAt(i);
+				};
+				$scope.gameOverClasses = 'gameOver';
 				
 			}
 		}();
 	};
 
 	$scope.emptyCells = [];
+
+	$scope.pageReload = function(){
+		location.reload();
+	};
 
 	var emptyCells = function(){
 			var countCells = (11 - randomizedValue.length);
@@ -101,4 +109,6 @@ myApp.controller('mainController', ['$scope', function($scope) {
 			}
 		}();
 	
+	$scope.gameOverClasses = 'gameOver gameOver--hidden';
+
 }]);
