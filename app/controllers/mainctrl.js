@@ -14,7 +14,7 @@ myApp.controller('mainController', ['$scope', function($scope) {
 					$scope.gameWonClasses.windowApear = 'gameWon is-gameWon--hidden';
 		};
 
-	var wordsArray = ['template', 'imposible', 'output', 'dog', 'frog', 'mother', 'obligatory', 'dispute', 'cat', 'hydrogen', 'infinity', 'cow', 'biosphere', 'scale', 'irak', 'stubborn', 'reply', 'underscored', 'initiate', 'nickname', 'table', 'filter', 'kickback', 'measurement', 'solidarity', 'letter', 'refract', 'polar', 'show', 'reduction', 'motobike', 'rewriter', 'mastery', 'religion', 'converter', 'direction', 'beginner', 'circus', 'dancer', 'driver', 'substring', 'schedule', 'radar', 'conceal', 'zip', 'pragnant', 'tiny', 'argument', 'literal', 'imposible'];
+	var wordsArray = ['template', 'imposible', 'output', 'dog', 'frog', 'mother', 'obligatory', 'dispute', 'cat', 'hydrogen', 'infinity', 'cow', 'biosphere', 'scale', 'irak', 'stubborn', 'reply', 'underscored', 'initiate', 'nickname', 'table', 'filter', 'kickback', 'measurement', 'solidarity', 'letter', 'refract', 'polar', 'show', 'reduction', 'motorbike', 'rewriter', 'mastery', 'religion', 'converter', 'direction', 'beginner', 'circus', 'dancer', 'driver', 'substring', 'schedule', 'radar', 'concealed', 'zip', 'pregnant', 'tiny', 'argument', 'literal', 'imposible'];
 	var wordsLottery = function(){
 		var rand = wordsArray[Math.floor(Math.random() * wordsArray.length)];
 		return randomizedValue = rand.toUpperCase();	
