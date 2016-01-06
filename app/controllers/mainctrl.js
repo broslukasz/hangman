@@ -1,4 +1,4 @@
-myApp.controller('mainController', ['$scope', 'dataService', function($scope, dataService) {
+myApp.controller('mainController', ['$scope', function($scope) {
 
 	var gameWon = function(){
 			$scope.winsCounter++;
