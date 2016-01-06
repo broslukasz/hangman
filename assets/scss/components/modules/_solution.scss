@@ -1,0 +1,25 @@
+.solution{
+    margin-top: 6px;
+    position: relative;
+}
+
+.solution__wordBoxes{
+    display: inline-block;
+    width: 20px;
+    height: 33px;
+    margin: 5px;
+    font-size: 28px;
+    padding: 18px;
+    text-align: center;
+
+}
+
+.solution__wordBoxes--empty{
+    background: $emptyBoxColor;
+    color: $emptyBoxColor;
+}
+
+.solution__wordBoxes--full{
+    background: $fontColorPurple;
+    color: white;
+}

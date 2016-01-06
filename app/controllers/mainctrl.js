@@ -1,6 +1,21 @@
-myApp.controller('mainController', ['$scope', function($scope) {
+myApp.controller('mainController', ['$scope', 'dataService', function($scope, dataService) {
 
-	var wordsArray = ['jastrzab', 'kredka', 'lodowka', 'pies', 'lody'];
+	var gameWon = function(){
+			$scope.winsCounter++;
+					$scope.buttonsArray = [];
+					$scope.missedArray = [];
+					$scope.hangEvent.array = [];
+					$scope.lettersMatched = [];
+					$scope.wordsLotteryMechanizm();
+					$scope.emptyCells = [];
+					$scope.emptyCells2();
+					$scope.mistakesNumber = 0;
+					$scope.makeEmpty();
+					$scope.gameWonClasses.windowApear = 'gameWon is-gameWon--hidden';
+		};
+
+	var wordsArray = ['wiaderko', 'kwiatek', 'studnia', 'komar', 'buty', 'misiu'];
+	//var wordsArray = ['tinplating', 'involuntary', 'outpity', 'hegelianism', 'frother', 'viscoid', 'objurgate', 'disquieting', 'gemlike', 'hydrolysed', 'intrant', 'outvying', 'biodynamics', 'scaleboard', 'irak', 'suborn', 'replume', 'unscorched', 'incinerate', 'nymphet', 'haemorrhoid', 'unfiltered', 'kickback', 'manservant', 'salivate', 'hipshot', 'refract', 'nonadaptor', 'showd', 'remnant', 'molilalia', 'rewriter', 'mastery', 'hinduism', 'coveter', 'canephorae', 'flanger', 'cincturing', 'damner', 'scalawag', 'subastral', 'sculduggery', 'redarn', 'noncereal', 'zincy', 'pargeting', 'tawney', 'allurement', 'luetically', 'idoneous'];
 	var wordsLottery = function(){
 		var rand = wordsArray[Math.floor(Math.random() * wordsArray.length)];
 		return randomizedValue = rand.toUpperCase();	
@@ -11,24 +26,23 @@ myApp.controller('mainController', ['$scope', function($scope) {
 		return randomizedValue = rand.toUpperCase();	
 	};	
 
-	$scope.wordsLotteryMechanizm = wordsLottery2;
-	$scope.randomValue = randomizedValue;
-
-	$scope.buttonsArray = [];
-	$scope.wordsArray = ['piesa', 'kota', 'mysliwya'];
-	$scope.missedArray = [];
-
 	var primaryArray = [];
-	var secondaryArray = [];
+
+	$scope.wordsLotteryMechanizm = wordsLottery2;
+	$scope.primaryArray = primaryArray;
+	$scope.buttonsArray = [];
+	$scope.missedArray = [];
+	$scope.lettersMatched = [];
 	$scope.mistakesNumber = 0;
+	$scope.winsCounter = 0;
 	$scope.hangEvent = {
 		array: [],
 		imgAdd: function(){
-			if ($scope.mistakesNumber < 12) {
+			if ($scope.mistakesNumber < 12 && $scope.lettersMatched.length < primaryArray.length) {
 				this.array.push({url: 'assets/img/order/0' + this.array.length + '.png', imgClass: 'imgBox__hangImages--img0' + this.array.length});
 			}	
 		}
-		};
+	};
 
 	var emptyLettersArray = function(){
 		for (z = 0, x = randomizedValue.length; z<x; z++){
@@ -43,27 +57,24 @@ myApp.controller('mainController', ['$scope', function($scope) {
 		};
 	};
 
-	$scope.primaryArray = primaryArray;
-	$scope.lettersMatched = [];
-
-	$scope.winsCounter = 0;
-
 	$scope.keyPress = function(keyCode){
 		console.log(keyCode);
-   		var code = keyCode;
-   		var res = String.fromCharCode(keyCode);
+		var code = keyCode;
+   		var currentKey = String.fromCharCode(keyCode);
    		var count = 0;
 		for (var g = 0, h = randomizedValue.length; g < h; g++) {
-			if (res === randomizedValue.charAt(g)) {
-				primaryArray[g] = res;
+			if (currentKey === randomizedValue.charAt(g)) {
+				primaryArray[g] = currentKey;
 				console.log('The letter is on the positin ' + g);
-				if ($scope.buttonsArray.indexOf(res + ", ") >= 0) {
+				if ($scope.buttonsArray.indexOf(currentKey + ", ") >= 0) {
 					console.log('The existing letter has been repeated');
-					$scope.mistakesNumber++;
+					if ($scope.lettersMatched.length < primaryArray.length) {
+						$scope.mistakesNumber++;
+					};
 					$scope.hangEvent.imgAdd();
 				} else {
-					$scope.lettersMatched.push(res);
-					console.log("Letter " + res + " finds in the word for the first time");
+					$scope.lettersMatched.push(currentKey);
+					console.log("Letter " + currentKey + " finds in the word for the first time");
 				}
 				
 			} else {
@@ -73,39 +84,32 @@ myApp.controller('mainController', ['$scope', function($scope) {
 		};
 
 		var repetition = function (){
-			var countRepeat = $scope.buttonsArray.indexOf(res + ", ");
-			if (count == randomizedValue.length && (code > 64 && code < 91)) {
+			var countRepeat = $scope.buttonsArray.indexOf(currentKey + ", ");
+			if (count == randomizedValue.length && (code > 64 && code < 91) && $scope.lettersMatched.length < primaryArray.length) {
 			console.log('The letter does not exists');
 			$scope.mistakesNumber++;
 			$scope.hangEvent.imgAdd();
 				if (countRepeat >= 0) {
 					console.log('It is still a wrong letter');
 				} else {
-					$scope.missedArray.push(res + " ");
-					countRepeat++;
+					if ($scope.mistakesNumber < 12) {
+						$scope.missedArray.push(currentKey + " ");
+						countRepeat++;
+					};
+					
 				}
 			}
 		}();
 		
-		code > 64 && code < 91 ? ($scope.buttonClicked = res, $scope.buttonsArray.push($scope.buttonClicked + ", ")) : console.log(res + " to nie litera");
-
-		
+		code > 64 && code < 91 ? ($scope.buttonClicked = currentKey, $scope.buttonsArray.push($scope.buttonClicked + ", ")) : console.log(currentKey + " to nie litera");
 
 		var ukonczono = function(){
 			if ($scope.lettersMatched.length == $scope.primaryArray.length && $scope.mistakesNumber < 11) {
-				setTimeout(function(){ alert("CONGRATULATIONS! You have won the game!"); }, 200);
-
-				$scope.winsCounter++;
-				$scope.buttonsArray = [];
-				$scope.missedArray = [];
-				$scope.hangEvent.array = [];
-				$scope.lettersMatched = [];
-				$scope.wordsLotteryMechanizm();
-				$scope.emptyCells = [];
-				$scope.emptyCells2();
-				$scope.mistakesNumber = 0;
-				$scope.makeEmpty();
-
+				$scope.gameWonClasses.windowApear = 'gameWon';
+				$scope.gameWonClasses.text02 = 'gameOver__text gameOver__text--02';
+				if (keyCode == 13) {
+					gameWon();
+				};
 
 			} else if ($scope.mistakesNumber >= 11) {
 				for (var i = 0, x=randomizedValue.length; i < x; i++) {
@@ -114,7 +118,7 @@ myApp.controller('mainController', ['$scope', function($scope) {
 					primaryArray[i] =  randomizedValue.charAt(i);
 				};
 				$scope.gameOverClasses.windowApear = 'gameOver';
-				$scope.gameOverClasses.text02 = 'gameOver__text gameOver__text--02'
+				$scope.gameOverClasses.text02 = 'gameOver__text gameOver__text--02';
 				
 			}
 		}();
@@ -150,7 +154,12 @@ myApp.controller('mainController', ['$scope', function($scope) {
 	$scope.emptyCells2 = emptyCells2;
 	
 	$scope.gameOverClasses = {
-		windowApear: 'gameOver gameOver--hidden',
+		windowApear: 'gameOver is-gameOver--hidden',
+		text02: 'gameOver__text gameOver__text--02 is-gameOver__text--02--hidden'
+	};
+
+	$scope.gameWonClasses = {
+		windowApear: 'gameWon is-gameWon--hidden',
 		text02: 'gameOver__text gameOver__text--02 is-gameOver__text--02--hidden'
 	};
 

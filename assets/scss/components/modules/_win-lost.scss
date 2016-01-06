@@ -1,0 +1,63 @@
+
+.gameWon{
+    position: absolute;
+    background: $backgroundColor;
+    width: 810px;
+    height: 100%;
+    overflow: visible;
+    left: 0px;
+    top: 0;
+    z-index: 3;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.gameOver{
+    position: absolute;
+    background: $backgroundColor;
+    width: 810px;
+    height: 100%;
+    overflow: visible;
+    left: 0px;
+    top: 0;
+    z-index: 3;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.gameOver__text{
+    position: absolute;
+    top: 35%;
+    left: 37%;
+    padding: 10px 20px;
+}
+
+.gameOver__text--01{
+    color: white;
+    font-size: 35px;
+}
+
+.gameOver__text--02{
+    top: 46%;
+    left: 43%;
+    font-size: 18px;
+    border: 2px dashed $borderGameOverColor;
+    border-radius: 20px;
+    margin-top: 15px;
+    color: $borderGameOverColor;
+    &:hover{
+        cursor: pointer;
+        background: $backgroundGameOverColor;
+    };
+}
+
+.winingsCounter{
+    text-align: center;
+    margin: 20px;
+    font-size: 25px;
+}
+
+.winingsCounter__number{
+    color: $borderGameOverColor;
+    font-weight: 600;
+}
