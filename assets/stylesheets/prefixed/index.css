@@ -13,7 +13,7 @@ html, body, h1, h2, h3, p, ol, ul, li, a, div {
 /* line 15, ../scss/components/_base.scss */
 body {
   font-family: AllerDisplay, sans-serif;
-  font-size: fontBasicSize;
+  font-size: 16px;
   font-weight: 600;
   background: #3b4263;
   padding: 85px;

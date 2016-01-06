@@ -15,31 +15,31 @@
 .imgBox__hangImages--img00{
 	left: 32px;
     top: 1px;
-    z-index: 2;
+    z-index: $imgOverZ-index2;
 }
 
 .imgBox__hangImages--img01{
 	left: 69px;
     top: 98px;
-    z-index: 1;
+    z-index: $imgUnderZ-index1;
 }
 
 .imgBox__hangImages--img02{
 	left: 55px;
     top: 115px;
-    z-index: 1;
+    z-index: $imgUnderZ-index1;
 }
 
 .imgBox__hangImages--img03{
 	left: 88px;
     top: 115px;
-    z-index: 1;
+    z-index: $imgUnderZ-index1;
 }
 
 .imgBox__hangImages--img04{
 	left: 13px;
     top: 115px;
-    z-index: 1;
+    z-index: $imgUnderZ-index1;
 }
 
 .imgBox__hangImages--img05{
@@ -57,13 +57,13 @@
 .imgBox__hangImages--img07{
 	left: 84px;
     top: 191px;
-    z-index: 1;
+    z-index: $imgUnderZ-index1;
 }
 
 .imgBox__hangImages--img08{
 	left: 38px;
     top: 191px;
-    z-index: 1;
+    z-index: $imgUnderZ-index1;
 }
 
 .imgBox__hangImages--img09{

@@ -14,8 +14,7 @@ myApp.controller('mainController', ['$scope', 'dataService', function($scope, da
 					$scope.gameWonClasses.windowApear = 'gameWon is-gameWon--hidden';
 		};
 
-	var wordsArray = ['wiaderko', 'kwiatek', 'studnia', 'komar', 'buty', 'misiu'];
-	//var wordsArray = ['tinplating', 'involuntary', 'outpity', 'hegelianism', 'frother', 'viscoid', 'objurgate', 'disquieting', 'gemlike', 'hydrolysed', 'intrant', 'outvying', 'biodynamics', 'scaleboard', 'irak', 'suborn', 'replume', 'unscorched', 'incinerate', 'nymphet', 'haemorrhoid', 'unfiltered', 'kickback', 'manservant', 'salivate', 'hipshot', 'refract', 'nonadaptor', 'showd', 'remnant', 'molilalia', 'rewriter', 'mastery', 'hinduism', 'coveter', 'canephorae', 'flanger', 'cincturing', 'damner', 'scalawag', 'subastral', 'sculduggery', 'redarn', 'noncereal', 'zincy', 'pargeting', 'tawney', 'allurement', 'luetically', 'idoneous'];
+	var wordsArray = ['template', 'imposible', 'output', 'dog', 'frog', 'mother', 'obligatory', 'dispute', 'cat', 'hydrogen', 'infinity', 'cow', 'biosphere', 'scale', 'irak', 'stubborn', 'reply', 'underscored', 'initiate', 'nickname', 'table', 'filter', 'kickback', 'measurement', 'solidarity', 'letter', 'refract', 'polar', 'show', 'reduction', 'motobike', 'rewriter', 'mastery', 'religion', 'converter', 'direction', 'beginner', 'circus', 'dancer', 'driver', 'substring', 'schedule', 'radar', 'conceal', 'zip', 'pragnant', 'tiny', 'argument', 'literal', 'imposible'];
 	var wordsLottery = function(){
 		var rand = wordsArray[Math.floor(Math.random() * wordsArray.length)];
 		return randomizedValue = rand.toUpperCase();	

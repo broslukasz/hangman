@@ -1,6 +1,6 @@
 
 @font-face {
-  font-family: AllerDisplay, sans-serif;
+  font-family: $fontFamily;
   src: url(assets/fonts/AllerDisplay.ttf), format('truetype');
 }
 
@@ -13,8 +13,8 @@ html, body, h1, h2, h3, p, ol, ul, li, a, div{
 }
 
 body{
-  font-family: AllerDisplay, sans-serif;
-  font-size: 16px;
+  font-family: $fontFamily;
+  font-size: fontBasicSize;
   font-weight: 600;
   background: $backgroundColor;
   padding: 85px;
