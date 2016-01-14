@@ -3,14 +3,14 @@
   src: url(assets/fonts/AllerDisplay.ttf), format("truetype");
 }
 
-/* line 9, ../scss/components/_base.scss */
+/* line 9, C:/xampp/htdocs/github/szubienica/assets/scss/components/_base.scss */
 html, body, h1, h2, h3, p, ol, ul, li, a, div {
   padding: 0;
   border: 0;
   margin: 0;
 }
 
-/* line 15, ../scss/components/_base.scss */
+/* line 15, C:/xampp/htdocs/github/szubienica/assets/scss/components/_base.scss */
 body {
   font-family: AllerDisplay, sans-serif;
   font-size: fontBasicSize;
@@ -19,12 +19,12 @@ body {
   padding: 85px;
 }
 
-/* line 2, ../scss/components/_layout.scss */
+/* line 2, C:/xampp/htdocs/github/szubienica/assets/scss/components/_layout.scss */
 .clear {
   clear: both;
 }
 
-/* line 6, ../scss/components/_layout.scss */
+/* line 6, C:/xampp/htdocs/github/szubienica/assets/scss/components/_layout.scss */
 .mainContainer {
   padding: 34px;
   box-sizing: border-box;
@@ -36,25 +36,25 @@ body {
   position: relative;
 }
 
-/* line 17, ../scss/components/_layout.scss */
+/* line 17, C:/xampp/htdocs/github/szubienica/assets/scss/components/_layout.scss */
 .mainContainer__boxLeft {
   width: 150px;
   float: left;
   position: relative;
 }
 
-/* line 23, ../scss/components/_layout.scss */
+/* line 23, C:/xampp/htdocs/github/szubienica/assets/scss/components/_layout.scss */
 .mainContainer__boxLeft--bar {
   position: relative;
   right: 142px;
 }
 
-/* line 28, ../scss/components/_layout.scss */
+/* line 28, C:/xampp/htdocs/github/szubienica/assets/scss/components/_layout.scss */
 .mainContainer__boxRight {
   margin-left: 350px;
 }
 
-/* line 32, ../scss/components/_layout.scss */
+/* line 32, C:/xampp/htdocs/github/szubienica/assets/scss/components/_layout.scss */
 .mainContainer__boxRight--missed {
   font-size: 16px;
   font-weight: 600;
@@ -62,23 +62,23 @@ body {
   margin-bottom: 12px;
 }
 
-/* line 39, ../scss/components/_layout.scss */
+/* line 39, C:/xampp/htdocs/github/szubienica/assets/scss/components/_layout.scss */
 .mainContainer__boxRight--missedLetters {
   font-size: 35px;
   font-weight: 600;
   color: #4d69fa;
 }
 
-/* line 45, ../scss/components/_layout.scss */
+/* line 45, C:/xampp/htdocs/github/szubienica/assets/scss/components/_layout.scss */
 .mainContainer__boxRight--missedLetters--spacing {
   padding-left: 2px;
 }
-/* line 47, ../scss/components/_layout.scss */
+/* line 47, C:/xampp/htdocs/github/szubienica/assets/scss/components/_layout.scss */
 .mainContainer__boxRight--missedLetters--spacing:first-child {
   padding-left: 0;
 }
 
-/* line 52, ../scss/components/_layout.scss */
+/* line 52, C:/xampp/htdocs/github/szubienica/assets/scss/components/_layout.scss */
 .triangularBackground {
   position: absolute;
   right: 0;
@@ -89,7 +89,7 @@ body {
   border-left: 250px solid transparent;
 }
 
-/* line 1, ../scss/components/modules/_imgbox.scss */
+/* line 1, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox {
   width: 143px;
   height: 300px;
@@ -99,96 +99,96 @@ body {
   bottom: 8px;
 }
 
-/* line 10, ../scss/components/modules/_imgbox.scss */
+/* line 10, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox__hangImages {
   color: red;
   position: absolute;
 }
 
-/* line 15, ../scss/components/modules/_imgbox.scss */
+/* line 15, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox__hangImages--img00 {
   left: 32px;
   top: 1px;
   z-index: 2;
 }
 
-/* line 21, ../scss/components/modules/_imgbox.scss */
+/* line 21, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox__hangImages--img01 {
   left: 69px;
   top: 98px;
   z-index: 1;
 }
 
-/* line 27, ../scss/components/modules/_imgbox.scss */
+/* line 27, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox__hangImages--img02 {
   left: 55px;
   top: 115px;
   z-index: 1;
 }
 
-/* line 33, ../scss/components/modules/_imgbox.scss */
+/* line 33, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox__hangImages--img03 {
   left: 88px;
   top: 115px;
   z-index: 1;
 }
 
-/* line 39, ../scss/components/modules/_imgbox.scss */
+/* line 39, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox__hangImages--img04 {
   left: 13px;
   top: 115px;
   z-index: 1;
 }
 
-/* line 45, ../scss/components/modules/_imgbox.scss */
+/* line 45, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox__hangImages--img05 {
   left: 139px;
   top: 163px;
   z-index: 0;
 }
 
-/* line 51, ../scss/components/modules/_imgbox.scss */
+/* line 51, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox__hangImages--img06 {
   left: 11px;
   top: 162px;
   z-index: 0;
 }
 
-/* line 57, ../scss/components/modules/_imgbox.scss */
+/* line 57, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox__hangImages--img07 {
   left: 84px;
   top: 191px;
   z-index: 1;
 }
 
-/* line 63, ../scss/components/modules/_imgbox.scss */
+/* line 63, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox__hangImages--img08 {
   left: 38px;
   top: 191px;
   z-index: 1;
 }
 
-/* line 69, ../scss/components/modules/_imgbox.scss */
+/* line 69, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox__hangImages--img09 {
   left: 100px;
   top: 273px;
   z-index: 0;
 }
 
-/* line 75, ../scss/components/modules/_imgbox.scss */
+/* line 75, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_imgbox.scss */
 .imgBox__hangImages--img010 {
   left: 21px;
   top: 273px;
   z-index: 0;
 }
 
-/* line 1, ../scss/components/modules/_solution.scss */
+/* line 1, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_solution.scss */
 .solution {
   margin-top: 6px;
   position: relative;
 }
 
-/* line 6, ../scss/components/modules/_solution.scss */
+/* line 6, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_solution.scss */
 .solution__wordBoxes {
   display: inline-block;
   width: 20px;
@@ -199,19 +199,19 @@ body {
   text-align: center;
 }
 
-/* line 17, ../scss/components/modules/_solution.scss */
+/* line 17, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_solution.scss */
 .solution__wordBoxes--empty {
   background: #e6e6e7;
   color: #e6e6e7;
 }
 
-/* line 22, ../scss/components/modules/_solution.scss */
+/* line 22, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_solution.scss */
 .solution__wordBoxes--full {
   background: #50525a;
   color: white;
 }
 
-/* line 2, ../scss/components/modules/_win-lost.scss */
+/* line 2, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_win-lost.scss */
 .gameWon {
   position: absolute;
   background: #3b4263;
@@ -225,7 +225,7 @@ body {
   text-align: center;
 }
 
-/* line 15, ../scss/components/modules/_win-lost.scss */
+/* line 15, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_win-lost.scss */
 .gameOver {
   position: absolute;
   background: #3b4263;
@@ -239,7 +239,7 @@ body {
   text-align: center;
 }
 
-/* line 28, ../scss/components/modules/_win-lost.scss */
+/* line 28, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_win-lost.scss */
 .gameOver__text {
   position: absolute;
   top: 35%;
@@ -247,13 +247,13 @@ body {
   padding: 10px 20px;
 }
 
-/* line 35, ../scss/components/modules/_win-lost.scss */
+/* line 35, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_win-lost.scss */
 .gameOver__text--01 {
   color: white;
   font-size: 35px;
 }
 
-/* line 40, ../scss/components/modules/_win-lost.scss */
+/* line 40, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_win-lost.scss */
 .gameOver__text--02 {
   top: 46%;
   left: 43%;
@@ -263,37 +263,37 @@ body {
   margin-top: 15px;
   color: #ffb900;
 }
-/* line 48, ../scss/components/modules/_win-lost.scss */
+/* line 48, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_win-lost.scss */
 .gameOver__text--02:hover {
   cursor: pointer;
   background: rgba(255, 185, 110, 0);
 }
 
-/* line 54, ../scss/components/modules/_win-lost.scss */
+/* line 54, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_win-lost.scss */
 .winingsCounter {
   text-align: center;
   margin: 20px;
   font-size: 25px;
 }
 
-/* line 60, ../scss/components/modules/_win-lost.scss */
+/* line 60, C:/xampp/htdocs/github/szubienica/assets/scss/components/modules/_win-lost.scss */
 .winingsCounter__number {
   color: #ffb900;
   font-weight: 600;
 }
 
-/* line 1, ../scss/components/_states.scss */
+/* line 1, C:/xampp/htdocs/github/szubienica/assets/scss/components/_states.scss */
 .is-gameOver__text--02--hidden {
   border-color: white;
   color: white;
 }
 
-/* line 6, ../scss/components/_states.scss */
+/* line 6, C:/xampp/htdocs/github/szubienica/assets/scss/components/_states.scss */
 .is-gameWon--hidden {
   visibility: hidden;
 }
 
-/* line 10, ../scss/components/_states.scss */
+/* line 10, C:/xampp/htdocs/github/szubienica/assets/scss/components/_states.scss */
 .is-gameOver--hidden {
   visibility: hidden;
 }

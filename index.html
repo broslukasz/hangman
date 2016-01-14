@@ -10,26 +10,23 @@
     <script src="bower_components/angular/angular.min.js"></script>
 
 </head>
-<body ng-controller="mainController" ng-keyup="keyPress($event.keyCode)">
+<body ng-controller="mainController as mainCtrl" ng-keyup="mainCtrl.keyPress($event.keyCode)">
 
 <div class="mainContainer">
-	<div class="{{gameOverClasses.windowApear}}">
-		<div class="gameOver__text gameOver__text--01">Game Over</div>
-		<div class="{{gameOverClasses.text02}}" ng-click="pageReload()">New world</div>
-	</div>
 
-	<div class="{{gameWonClasses.windowApear}}">
-		<div class="gameOver__text gameOver__text--01">Game Won!</div>
-		<div class="{{gameWonClasses.text02}}" ng-click="whenWon()">New world</div>
-	</div>
+	<ng-include src="'partials/gameover.html'"></ng-include>
+	<ng-include src="'partials/gamewon.html'"></ng-include>
 
-	<div class="triangularBackground">jakiś</div>
+
+	
+
+	<div class="triangularBackground"></div>
 	<div class="mainContainer__boxLeft">
 		<div>
 			<img class="mainContainer__boxLeft--bar" src="assets/img/bar.png">
 		</div>
 		<div class="imgBox">
-			<div class="imgBox__hangImages {{imgs.imgClass}}" ng-repeat='imgs in hangEvent.array'>
+			<div class="imgBox__hangImages {{imgs.imgClass}}" ng-repeat='imgs in mainCtrl.hangEvent.array'>
 			<img ng-src="{{imgs.url}}" class="abs">
 			</div>
 		</div>
@@ -37,19 +34,19 @@
 	<div class="mainContainer__boxRight mainContainer__boxRight--missed">YOU MISSED: </div>
 
 	<div class="mainContainer__boxRight mainContainer__boxRight--missedLetters">
-		<span class="mainContainer__boxRight--missedLetters--spacing" ng-repeat="missed in missedArray track by $index" ng-bind='missed'></span>
+		<span class="mainContainer__boxRight--missedLetters--spacing" ng-repeat="missed in mainCtrl.missedArray track by $index" ng-bind='missed'></span>
 	</div>
 
 	<div class="clear"></div>
 	<div class="solution">
 
-		<span class="solution__wordBoxes solution__wordBoxes--empty" ng-repeat='listEmpty in emptyCells track by $index' ng-bind='listEmpty'></span>
-
-		<span class="solution__wordBoxes solution__wordBoxes--full" ng-repeat='listToFill in primaryArray track by $index' ng-bind='listToFill'></span>
+		<ng-include src="'partials/emptyboxes.html'"></ng-include>
+		<ng-include src="'partials/fillboxes.html'"></ng-include>
+		
 	</div>		
 </div>
 
-<div class="winingsCounter">You have won <span class="winingsCounter__number">{{winsCounter}}</span> times!!!</div>
+<div class="winingsCounter">You have won <span class="winingsCounter__number" ng-bind="mainCtrl.winsCounter"></span> times!!!</div>
 	
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 
@@ -58,6 +55,8 @@
 
     <!-- Controllers -->
     <script src="app/controllers/mainctrl.js"></script>
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 </body>
 </html>
