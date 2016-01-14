@@ -9,7 +9,6 @@ angular.module("myApp")
 		$http.get(wordsUrl)
 			.success(function(data){
 				vm.wordsArray = [];
-				vm.testowanie = "pietruszka";
 				
 				for (var i = 0, j = data.length; i < j; i++) {
 				vm.wordsArray.push(data[i].word);
