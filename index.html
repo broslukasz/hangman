@@ -14,8 +14,8 @@
 
 <div class="mainContainer">
 
-	<ng-include src="'partials/gameover.html'"></ng-include>
-	<ng-include src="'partials/gamewon.html'"></ng-include>
+	<ng-include ng-if="mainCtrl.mistakesNumber >= 11" src="'partials/gameOver.html'"></ng-include>
+	<ng-include ng-if="mainCtrl.lettersMatched.length == mainCtrl.displayMatchedArray.length && mainCtrl.mistakesNumber < 11" src="'partials/gameWon.html'"></ng-include>
 
 
 	
@@ -34,27 +34,29 @@
 	<div class="mainContainer__boxRight mainContainer__boxRight--missed">YOU MISSED: </div>
 
 	<div class="mainContainer__boxRight mainContainer__boxRight--missedLetters">
-		<span class="mainContainer__boxRight--missedLetters--spacing" ng-repeat="missed in mainCtrl.missedArray track by $index" ng-bind='missed'></span>
+		<span class="mainContainer__boxRight--missedLetters--spacing" ng-repeat="missed in mainCtrl.missedArray track by $index" ng-cloak>{{missed}}</span>
 	</div>
 
 	<div class="clear"></div>
 	<div class="solution">
 
-		<ng-include src="'partials/emptyboxes.html'"></ng-include>
-		<ng-include src="'partials/fillboxes.html'"></ng-include>
+		<ng-include src="'partials/emptyBoxes.html'"></ng-include>
+		<ng-include src="'partials/fillBoxes.html'"></ng-include>
 
 	</div>		
 </div>
 
-<div class="winingsCounter">You have won <span class="winingsCounter__number" ng-bind="mainCtrl.winsCounter"></span> times!!!</div>
-	
+<div class="winingsCounter">You have won <span class="winingsCounter__number" ng-cloak>{{mainCtrl.winsCounter || 0}}</span> times!!!</div>
+	"
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 
 	<!-- Modules -->
     <script src="app/app.js"></script>
 
     <!-- Controllers -->
-    <script src="app/controllers/mainctrl.js"></script>
+    <script src="app/controllers/app.mainCtrl.js"></script>
+
+    
 
 </body>
 </html>
